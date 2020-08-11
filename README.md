@@ -1,3 +1,3 @@
 # Cool-Creations
 
-<img src="https://github.com/CodeKoning/Cool-Creations/ckLogo.svg">
+<img src="https://github.com/CodeKoning/Cool-Creations/blob/master/ckLogo.svg">
