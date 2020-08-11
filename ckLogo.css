@@ -1,0 +1,155 @@
+svg { /* Main View Box */
+    display: block;
+    margin: 100px auto;
+    width: 400px;
+    fill: white;
+    stroke: black;
+    stroke-width: 1;
+    stroke-linecap: round;
+}
+
+/*
+The lines that form the backbone of the letter K are the 'trunks' and the others are the 'arms.'
+*/
+
+.top-trunk,
+.bottom-trunk,
+.top-branch,
+.bottom-branch {
+  transform: translate(20px, 20px) rotate(0deg);
+}
+
+.top-trunk{
+  stroke-width: 2.5;
+  stroke: rgb(29, 48, 80);
+  animation: clockwise-trunk ease-in-out 1200ms;
+  animation-fill-mode: forwards;
+}
+
+.bottom-trunk {
+  stroke-width: 2.5;
+  stroke: rgb(104, 119, 134);
+  animation: counter-clockwise-trunk ease-in-out 1200ms;
+  animation-fill-mode: forwards;
+}
+
+.top-branch {
+  stroke-width: 2.2;
+  stroke: rgb(29, 48, 80);
+  transform: translate(20px,20px) rotate(-45deg);
+}
+
+.bottom-branch {
+  stroke-width: 2.2;
+  stroke: rgb(104, 119, 134);
+  animation: counter-clockwise-branch ease-out 1200ms;
+  animation-fill-mode: forwards;
+}
+
+.pin { /* Pivot point circle */
+  stroke: rgb(114, 175, 177);
+  stroke-width: 0.3;
+}
+
+#lastNameLetters {
+    font-family: 'Orbitron';
+    stroke-dasharray: 3650;
+    stroke-dashoffset: 3650;
+    -webkit-animation: draw ease-out 15s forwards;
+    -moz-animation: draw ease-out 15s forwards;
+    -o-animation: draw ease-out 15s forwards;
+    -ms-animation: draw ease-out 15s forwards;
+    animation: draw ease-out 15s forwards;
+}
+
+/* SVG Lines to create animated toggle button for the dot in the 'i' */
+
+#dotborder {
+    stroke: white;
+}
+
+#dotborder2 {
+    stroke: rgb(29, 48, 80);
+}
+
+#dot {
+    stroke: rgb(29, 48, 80);
+    animation: dot-rise linear 400ms;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes clockwise-trunk {
+
+    0%{transform: translate(20px, 20px) rotate(0deg);}
+    100%{transform: translate(20px, 20px) rotate(990deg);}
+}
+
+@keyframes counter-clockwise-trunk {
+    0%{transform: translate(20px, 20px) rotate(0deg);}
+    100%{transform: translate(20px, 20px) rotate(-990deg);}
+}
+
+@keyframes clockwise-branch {
+    0%{transform: translate(20px, 20px) rotate(0deg);}
+    100%{transform: translate(20px, 20px) rotate(-45deg);}
+}
+
+@keyframes counter-clockwise-branch {
+    0%{transform: translate(20px, 20px) rotate(0deg);}
+    100%{transform: translate(20px, 20px) rotate(-675deg);}
+}
+
+text {
+    /* use $(this).css('fill', 'red') in JS to add back fill */
+    font-family: 'Orbitron';
+    stroke: rgb(29, 48, 80);
+}
+
+#codeLetters {
+    stroke-dasharray: 3650;
+    stroke-dashoffset: 3650;
+    -webkit-animation: draw ease 20s forwards;
+    -moz-animation: draw ease 20s forwards;
+    -o-animation: draw ease 20s forwards;
+    -ms-animation: draw ease 20s forwards;
+    animation: draw ease 20s forwards;
+    animation-delay: 200ms;
+}
+
+@-webkit-keyframes draw {
+    100% { stroke-dashoffset: 0; }
+}
+@-moz-keyframes draw {
+    100% { stroke-dashoffset: 0;}
+}
+@-o-keyframes draw {
+    100% { stroke-dashoffset: 0;}
+}
+@-ms-keyframes draw {
+    100% { stroke-dashoffset: 0;}
+}
+@keyframes draw {
+    100% { stroke-dashoffset: 0;}
+}
+
+@-webkit-keyframes dot-rise {
+    100% { transform: translateY(-1px);
+           stroke: rgb(141, 195, 197);}
+}
+@-moz-keyframes dot-rise {
+    100% { transform: translateY(-1px);
+           stroke: rgb(141, 195, 197);}
+}
+@-o-keyframes dot-rise {
+    100% { transform: translateY(-1px);
+           stroke: rgb(141, 195, 197);}
+}
+@-ms-keyframes dot-rise {
+    100% { transform: translateY(-1px);
+           stroke: rgb(141, 195, 197);}
+}
+@keyframes dot-rise {
+    100% { transform: translateY(-1px);
+           stroke: rgb(141, 195, 197);}
+}
