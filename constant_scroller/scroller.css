@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+
+  @keyframes scroll {
+    0% { transform: translateX(0%);}
+    100% {transform: translateX(-40%);}
+  }
+
+  .slider-row {
+    margin: 10px auto;
+    display: block;
+    height: 45px;
+    width: 3000px;
+    overflow: hidden;
+    animation: scroll 40000ms linear infinite;
+    animation-play-state: running;
+  }
+
+  .slider-container {
+    margin: 50px auto;
+    border-top: .5px solid #a2b2c9;
+    border-bottom: .5px solid #a2b2c9;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .slider-span {
+    display: inline-block;
+    font-size: 20px;
+    color: #a2b2c9;
+    text-transform: uppercase;
+    line-height: 45px;
+  }
